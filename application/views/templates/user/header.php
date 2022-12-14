@@ -57,15 +57,20 @@ https://templatemo.com/tm-566-medic-care
 
                                 <a class="nav-link" href="<?=  base_url('order') ?>">Order</a>
                             </li>
-
-                            <a class="navbar-brand d-none d-lg-block" href="<?=  base_url('konsultasi') ?>">
-                                Konsultasi
-                               
-                            </a>
-                            <a class="navbar-brand d-none d-lg-block" href="<?=  base_url('orderan') ?>">
-                                Orderan
-                                <strong class="d-block">(<?= $jml_konsul ?>)</strong>
-                            </a>
+                            <li>
+                                
+                                <a class="navbar-brand d-lg-block" href="<?=  base_url('konsultasi') ?>">
+                                    Konsultasi
+                                   
+                                </a>
+                            </li>
+                            <li>
+                                <a class="navbar-brand d-lg-block" href="<?=  base_url('orderan') ?>">
+                                    Orderan
+                                    <strong class="d-block">(<?= $jml_konsul ?>)</strong>
+                                </a>
+                                
+                            </li>
 
 
                             <li class="nav-item">
