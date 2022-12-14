@@ -18,7 +18,7 @@
                                         <tr>
                                           <th scope="col">No</th>
                                           <th scope="col">Nama Obat</th>
-                                          <th scope="col">Stok</th>
+                                          <!-- <th scope="col">Stok</th> -->
                                           <th scope="col">Status</th>
                                         </tr>
                                       </thead>
@@ -27,7 +27,6 @@
                                         <tr>
                                           <th scope="row"><?= ++$no ?></th>
                                           <td><?=$row_obat['nama_obat'] ?></td>
-                                          <td><?=$row_obat['jumlah'] ?></td>
                                           <td><?=$row_obat['status_obat'] ?></td>
                                         </tr>
                                         <?php } ?>
