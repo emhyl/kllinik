@@ -15,11 +15,6 @@
     </li>
 
     <li>
-      <a href="<?= base_url('perawat/home/informasi') ?>">
-       <i class="zmdi zmdi-info"></i> <span>Info Terkini</span>
-      </a>
-    </li>
-    <li>
       <a href="<?= base_url('perawat/home/jadwal') ?>">
         <i class="zmdi zmdi-notifications-active"></i> <span>Jadwal pelayanan</span>
       </a>

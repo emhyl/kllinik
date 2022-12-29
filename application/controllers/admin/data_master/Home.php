@@ -60,25 +60,28 @@ class Home extends CI_Controller {
 			break;
 
 			case 'data_perawat':
-			$tbl_name = 'tbl_perawat';
-			$this->session->set_flashdata('tbl_name',$tbl_name);
-			$this->session->set_flashdata('tbl_name_lbl',$tbl_name_url);
+				$tbl_name = 'tbl_perawat';
+				$this->session->set_flashdata('tbl_name',$tbl_name);
+				$this->session->set_flashdata('tbl_name_lbl',$tbl_name_url);
+				$options['field']['foto'] = [
+					'use' => false
+				];
 			break;
 
 			case 'data_order':
-			$tbl_name = 'tbl_order';
-			$this->session->set_flashdata('tbl_name',$tbl_name);
-			$this->session->set_flashdata('tbl_name_lbl',$tbl_name_url);
-			$options['field']['tgl_order'] = [
-				'use' => true,
-				'type' => 'date'
-			];
+				$tbl_name = 'tbl_order';
+				$this->session->set_flashdata('tbl_name',$tbl_name);
+				$this->session->set_flashdata('tbl_name_lbl',$tbl_name_url);
+				$options['field']['tgl_order'] = [
+					'use' => true,
+					'type' => 'date'
+				];
 			break;
-
+			
 			case 'data_list':
-			$tbl_name = 'tbl_list_pelayanan';
-			$this->session->set_flashdata('tbl_name',$tbl_name);
-			$this->session->set_flashdata('tbl_name_lbl',$tbl_name_url);
+				$tbl_name = 'tbl_list_pelayanan';
+				$this->session->set_flashdata('tbl_name',$tbl_name);
+				$this->session->set_flashdata('tbl_name_lbl',$tbl_name_url);
 		
 			break;
 		}
