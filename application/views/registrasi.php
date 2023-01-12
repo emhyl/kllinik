@@ -41,6 +41,7 @@
 		 	</div>
 		  <div class="card-title text-uppercase text-center py-3">Daftar</div>
         <?= $this->session->flashdata('sukses'); ?>
+        <?= $this->session->flashdata('err_login'); ?>
 		    <form action="<?= base_url('registrasi') ?>" method="post">
 			    
           <div class="form-group">

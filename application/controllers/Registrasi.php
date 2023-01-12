@@ -17,6 +17,43 @@ class Registrasi extends CI_Controller {
 			// die();
 			$data['username'] = $this->input->post('username');
 			// $data['password'] = $this->input->post('password');
+			$nik = strlen($this->input->post('nik'));
+			if($nik != 16){
+				$this->session->set_flashdata('err_login','
+					<div class="alert alert-danger p-2" role="alert">
+					 	NIK harus 16 digit angka.!
+					</div>
+				');
+				redirect(base_url('registrasi'));
+				exit();
+			}
+			if($this->M_homecare->getWhere('tbl_user',['nik'=>$this->input->post('nik')])){
+				$this->session->set_flashdata('err_login','
+					<div class="alert alert-danger p-2" role="alert">
+					 	NIK anda telah terdaftar.!
+					</div>
+				');
+				redirect(base_url('registrasi'));
+				exit();
+			}
+			if($this->M_homecare->getWhere('tbl_login',['username'=>$this->input->post('username')])){
+				$this->session->set_flashdata('err_login','
+					<div class="alert alert-danger p-2" role="alert">
+					 	username telah digunakan.!
+					</div>
+				');
+				redirect(base_url('registrasi'));
+				exit();
+			}
+			if($this->M_homecare->getWhere('tbl_user',['no_hp'=>$this->input->post('no_hp')])){
+				$this->session->set_flashdata('err_login','
+					<div class="alert alert-danger p-2" role="alert">
+					 	Nomor Hp anda telah terdaftar.!
+					</div>
+				');
+				redirect(base_url('registrasi'));
+				exit();
+			}
 
 			$auth = $this->M_homecare->getWhere('tbl_login',$data);
 			if(!$auth){
