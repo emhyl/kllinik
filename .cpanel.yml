@@ -1,5 +1,5 @@
 ---
 deployment:
 tasks:
-- export DEPLOYPATH=/home/emhy1337/public_html/klinik
+- export DEPLOYPATH=/home/emhy1337/public_html/newFolder1
 - /bin/cp -r * $DEPLOYPATH
