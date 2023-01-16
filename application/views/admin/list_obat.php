@@ -16,7 +16,6 @@
                     <tr>
                       <th scope="col">NO</th>
                       <th scope="col">Nama Obat</th>
-                      <th scope="col">Jumlah</th>
                       <th scope="col">Status tersedia</th>
                     </tr>
                   </thead>
@@ -24,9 +23,8 @@
                     <?php foreach($list_obat as $key => $rowTbl){?>
                       <tr>
                         <th scope="row"><?= ++$key ?></th>
-                        <td><?= $rowTbl['nama_obat']  ?></td>
-                        <td><?= $rowTbl['jumlah']  ?></td>
-                         <td><?= $rowTbl['status_obat'] ?></td>
+                          <td><?= $rowTbl['nama_obat']  ?></td>
+                           <td><?= $rowTbl['status_obat'] ?></td>
                       </tr>
                     <?php }?>
                   </tbody>

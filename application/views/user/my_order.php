@@ -73,6 +73,11 @@
                                         <?php if($row_order['sts_order'] == 'proses'){ ?>
                                             <a href="<?= base_url('proses/selesai/'.$row_order['id']) ?>" class="btn btn-success w-50 ">Selesai</a>
                                         <?php } ?>
+                                         <?php if($row_order['sts_order'] == 'order'){ ?>
+                                          <span class="fw-bold p-2 ">                                          
+                                            <a href="<?= base_url('proses/batal/'.$row_order['id']) ?>" class="btn btn-danger mt-1 ">Batal</a>
+                                          </span>
+                                        <?php } ?>
                                     </div>
                                   </div>
                                 </div>

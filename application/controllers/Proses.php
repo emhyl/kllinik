@@ -38,6 +38,14 @@ class Proses extends CI_Controller {
 
 	}
 
+	public function batal($id = null){
+		if(!is_null($id)){
+			$this->M_homecare->delete('tbl_order',['sts_order'=>'order'],['id'=>$id]);
+			redirect(base_url('orderan'));
+		}
+
+	}
+
 	public function send_chat(){
 		if(isset($_POST['btn-send'])){
 			$data['status'] = 'user';
